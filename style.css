@@ -1,0 +1,75 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: azure;
+}
+.navbar
+{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    color: wheat;
+}
+.navbar .navbar_title
+{
+    width: 30%;
+    height: 70%;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar .navbar_title span
+{
+  color: white;
+  position: relative;
+  top:2vh;
+}
+.navbar .navbar_desc
+{
+    width: 70%;
+    height: 50%;
+    font-size: 18px;
+}
+.navbar .navbar_desc ul
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+}
+.navbar .navbar_desc ul li
+{
+  list-style: none;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar .navbar_desc ul li a
+{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: wheat;
+    text-align: center;
+}
+.navbar .navbar_desc ul li a:hover
+{
+    font-family: Arial, Helvetica, sans-serif;
+   color: coral;
+   font-size: 20px;
+}
+.navbar .navbar_title:hover
+{
+    width: 30%;
+    height: 70%;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color:red;
+}

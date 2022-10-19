@@ -1,4 +1,4 @@
-# Contributing to MyTeacher
+# Contributing to ClassSchedule
 
 >All types of contributions are encouraged and valued. Please make sure to read the relevant section before making your contribution. As it will make it a lot easier for the maintainers and improve the experience for all involved. The community looks forward to your contributions. 🎉
 ---

@@ -1,4 +1,4 @@
-# MyTeacher
+#Class Schedule
 
 Django and Next js project where the student can select a teacher and schedule a class.
 

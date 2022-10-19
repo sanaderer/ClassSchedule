@@ -19,15 +19,15 @@ pip3 install -r requirements.txt
 ```
 ### Migrate
 ```
-python manage.py migrate
+python3 manage.py migrate
 ```
 
 ### Django User Admin
 ```
-python manage.py createsuperuser
+python3 manage.py createsuperuser
 ```
 
 ### Run server localhost:8000
 ```
-python manage.py runserver
+python3 manage.py runserver
 ```

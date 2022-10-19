@@ -1,6 +1,6 @@
 from django.forms import ValidationError
 from rest_framework import serializers
-from teacher.models import Professor, Aula
+from teacher.models import Professor, Aula, User
 
 class ProfessorSerializer(serializers.ModelSerializer):
     class Meta:
@@ -23,18 +23,17 @@ class AulaSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
-    class User(AbstractUser):
-        username = models.CharField(db_index=True, max_length=255, unique=True, default="")
-        email = models.EmailField(db_index=True, unique=True, null=True, blank=True, default="")
-        firstname = models.CharField(max_length=150, blank=True, default="")
-        lastname = models.CharField(max_length=150, blank=True, default="")
-        is_active = models.BooleanField(default=True)
-        is_staff = models.BooleanField(default=False)
-        created = models.DateTimeField(default=now)
-        updated = models.DateTimeField(auto_now=True)
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'email', 'password']
+        extra_kwargs = {
+            'password': {'write_only': True}
+        }
 
-        USERNAME_FIELD = 'email'
-        REQUIRED_FIELDS = ['username']
-
-        def __str__(self):
-            return f"{self.email}"
+    def create(self, validated_data):
+        password = validated_data.pop('password', None)
+        instance = self.Meta.model(**validated_data)
+        if password is not None:
+            instance.set_password(password)
+        instance.save()
+        return instance

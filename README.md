@@ -1,6 +1,6 @@
 # Next.js × Django 
 
-## Django(
+## Django
 
 ### Backend - create a virtual environment
 ```

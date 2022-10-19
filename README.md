@@ -4,7 +4,7 @@
 
 ### Backend - create a virtual environment
 ```
-python -m venv .venv
+python3 -m venv .venv
 ```
 
 ### Activate the virtual environment

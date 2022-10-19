@@ -1,9 +1,33 @@
-Class Schedule
+# Next.js × Django 
 
-Django and Next js project where the student can select a teacher and schedule a class.
+## Django(
 
----
+### Backend - create a virtual environment
+```
+python -m venv .venv
+```
 
-Looking forward to Contribute? Check out the [Contributing guide](CONTRIBUTING.md).
+### Activate the virtual environment
+```
+source .venv/bin/activate
+```
 
----
+### Run the requirements
+```
+pip3 install -r requirements.txt
+
+```
+### Migrate
+```
+python manage.py migrate
+```
+
+### Django User Admin
+```
+python manage.py createsuperuser
+```
+
+### Run server localhost:8000
+```
+python manage.py runserver
+```

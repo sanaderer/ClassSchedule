@@ -1,6 +1,6 @@
-from pathlib import Path
+from os.path import dirname, abspath
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = dirname(dirname(abspath(__file__)))
 
 SECRET_KEY = 'django-insecure-s!fy)lr0fmhpvab(tbu9eglkfsp0(+ebrp%c_d9qwcb_furq2d'
 
@@ -56,7 +56,7 @@ WSGI_APPLICATION = 'myteacher.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR + '/db.sqlite3',
     }
 }
 
